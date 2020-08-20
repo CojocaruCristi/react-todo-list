@@ -21,13 +21,13 @@ const RegisterForm = (props) => {
                     <Field placeholder={"Email"} name={"email"} component={"input"} />
                 </div>
                 <div>
-                    <Field placeholder={"Password"} name={"Password"} type={"password"} component={"input"} />
+                    <Field placeholder={"Password"} name={"password"} type={"password"} component={"input"} />
                 </div>
                 <div>
                     <Field name="country" component="select">
                         <option />
                         {props.countries.map(c => {
-                            return <option value={c.name} >{c.name}</option>
+                            return <option key={c.code} value={c.name} >{c.name}</option>
                         })}
                     </Field>
                 </div>

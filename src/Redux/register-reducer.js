@@ -1,16 +1,17 @@
 const REGISTER = "REGISTER";
 
 let initialState = {
-    users: [{
-        Password: "vcbxbsdf",
-        country: "Anguilla",
-        email: "xxxxx@gmail.com",
-        firstName: "xxxx",
-        lastName: "xxxx",
-        phoneNumber: "9999"
-    },
+    usersData: [
         {
-            Password: "fsadfasf",
+            password: "vcbxbsdf",
+            country: "Anguilla",
+            email: "xxxxx@gmail.com",
+            firstName: "xxxx",
+            lastName: "xxxx",
+            phoneNumber: "9999"
+        },
+        {
+            password: "fsadfasf",
             country: "Moldova",
             email: "cgggg@gmail.com",
             firstName: "gggg",
@@ -18,7 +19,7 @@ let initialState = {
             phoneNumber: "0000"
         },
         {
-            Password: "fdasfasdf",
+            password: "fdasfasdf",
             country: "america",
             email: "aaaaa@gmail.com",
             firstName: "aaaa",
@@ -1784,7 +1785,7 @@ const registerReducer = (state = initialState, action) => {
         case REGISTER:
             return {
                 ...state,
-                users: [...state.users, action.newUserData]
+                usersData: [...state.usersData, action.newUserData]
             }
         default:
             return state

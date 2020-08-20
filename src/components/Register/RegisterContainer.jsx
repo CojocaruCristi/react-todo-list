@@ -19,8 +19,7 @@ const ProfileContainer = (props) => {
 let mapStateToProps = (state) => {
     return(
         {
-            countries: state.users.countries,
-            isRedirect: state.users.redirectToLogin
+            countries: state.users.countries
         }
     )
 }
